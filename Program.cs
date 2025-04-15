@@ -55,7 +55,7 @@ app.MapGet("/api/stocks/{ticker}", async (string ticker, StockService stockServi
 .WithName("GetLatestStockPrice")
 .WithOpenApi();
 
-app.MapHub<StocksFeedHub>("/stocksfeed");
+app.MapHub<StocksFeedHub>("/stocksfeed")  ;
 
 app.UseHttpsRedirection();
 
