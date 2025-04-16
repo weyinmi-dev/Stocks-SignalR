@@ -35,11 +35,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 
     app.UseCors(policy => policy
-        //.WithOrigins(builder.Configuration["Cors:AllowedOrigins"]!)
-        .AllowAnyOrigin()
+        .WithOrigins(builder.Configuration["Cors:AllowedOrigins"]!)
         .AllowAnyHeader()
         .AllowAnyMethod()
-        //.AllowCredentials()
+        .AllowCredentials()
     );
 }
 
